@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<!-- 
+/**
+ * package Custom_Product
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+		<add id="Custom::top_level" title="Custom" module="Custom_Product" sortOrder="9999" resource="Magento_Backend::content"/>
+		<add id="Custom_Product::custom_product_product" title="Product Listing" module="Custom_Product" sortOrder="9999" resource="Magento_Backend::content" parent="Custom::top_level" action="custom_product/product/index"/>
+	</menu>
+</config>

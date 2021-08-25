@@ -1,0 +1,22 @@
+{
+    "name": "custom/module-product",
+    "description": "crud operation",
+    "type": "magento2-module",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "magento2",
+            "email": "info@admin.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Custom\\Product\\": ""
+        }
+    }
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<!-- 
+/**
+ * package Custom_Product
+ */
+ -->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+	<table name="custom_product_product" resource="default" engine="innodb" comment="custom_product_product Table">
+		<column xsi:type="smallint" name="product_id" padding="6" unsigned="true" nullable="false" identity="true" comment="Entity Id"/>
+		<constraint xsi:type="primary" referenceId="PRIMARY">
+			<column name="product_id"/>
+		</constraint>
+		<column name="sku" nullable="true" xsi:type="text" comment="sku"/>
+		<column name="vendor_number" nullable="true" xsi:type="varchar" comment="vendor_number" length="255"/>
+		<column name="vendor_note" nullable="true" xsi:type="text" comment="vendor_note"/>
+		<column name="created_at" nullable="true" xsi:type="datetime" comment="created_at"/>
+		<column name="updated_at" nullable="true" xsi:type="datetime" comment="updated_at"/>
+		<column name="store_id" nullable="true" xsi:type="text" comment="store ID"/>
+	</table>
+</schema>

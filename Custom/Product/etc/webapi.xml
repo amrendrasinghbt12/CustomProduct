@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<!-- 
+/**
+ * package Custom_Product
+ */
+ -->
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+	<route url="/V1/custom-product/product" method="POST">
+		<service class="Custom\Product\Api\ProductRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="Custom_Product::product_save"/>
+		</resources>
+	</route>
+	<route url="/V1/custom-product/product/search" method="GET">
+		<service class="Custom\Product\Api\ProductRepositoryInterface" method="getList"/>
+		<resources>
+			<resource ref="Custom_Product::product_view"/>
+		</resources>
+	</route>
+	<route url="/V1/custom-product/product/:productId" method="GET">
+		<service class="Custom\Product\Api\ProductRepositoryInterface" method="get"/>
+		<resources>
+			<resource ref="Custom_Product::product_view"/>
+		</resources>
+	</route>
+	<route url="/V1/custom-product/product/:productId" method="PUT">
+		<service class="Custom\Product\Api\ProductRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="Custom_Product::product_update"/>
+		</resources>
+	</route>
+	<route url="/V1/custom-product/product/:productId" method="DELETE">
+		<service class="Custom\Product\Api\ProductRepositoryInterface" method="deleteById"/>
+		<resources>
+			<resource ref="Custom_Product::product_delete"/>
+		</resources>
+	</route>
+</routes>
